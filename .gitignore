@@ -1,3 +1,8 @@
+
+# Don't commit credentials to repo
+credentials/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
