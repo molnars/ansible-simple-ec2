@@ -25,8 +25,20 @@ Run the command:
 to make these credentials available in your current shell.
 
 
-Gimme instance
---------------
+
+Gimme devserver!
+----------------
+To create the VPC and a devserver, run the command: 
+
+    ansible-playbook -i inventory create.yml
+
+You can look for the public ip of the newly created instance in `./inventory`.
 
 
-    ansible-playbook -i inventory aws/create-dev-instance.yml
+
+I don't want it anymore
+-----------------------
+To delete the devserver and the VPC, run the command: 
+
+    ansible-playbook -i inventory destroy.yml
+

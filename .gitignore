@@ -1,3 +1,5 @@
+# State is transient
+aws/state/
 
 # Don't commit credentials to repo
 credentials/
