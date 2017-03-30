@@ -1,6 +1,6 @@
 ---
 # Variables for VPC
-vpc_name: perfimpr
+vpc_name: simplevpc
 vpc_region: ca-central-1   # Canada
 vpc_cidr_block: 10.10.0.0/16
 public_cidr: 10.10.9.0/24
