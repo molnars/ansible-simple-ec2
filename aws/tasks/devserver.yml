@@ -8,8 +8,8 @@
     instance_type: "{{ instance_type }}"
     image: "{{ image_id }}"
     vpc_subnet_id: "{{ public_subnet }}"
-#    assign_public_ip: True
-    assign_public_ip: False
+    assign_public_ip: True
+#    assign_public_ip: False
     wait: True
     wait_timeout: 600
 #    user_data: |
