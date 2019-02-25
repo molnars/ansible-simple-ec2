@@ -35,19 +35,19 @@
     insertafter: "[devserver]" 
     line: "{{ instance_public_ip }}"
 
-- name: DevServer | Wait for SSH to come up
-  local_action: 
-    module: wait_for 
-    host: "{{ item }}" 
-    port: 22 
-    state: started
-  with_items: 
-    - "{{ instance_public_ip }}"
+#- name: DevServer | Wait for SSH to come up
+#  local_action: 
+#    module: wait_for 
+#    host: "{{ item }}" 
+#    port: 22 
+#    state: started
+#  with_items: 
+#    - "{{ instance_public_ip }}"
 
-- name: Create SSH Group to login dynamically to EC2 Instance(s)
-  add_host:
-    hostname: "{{ item }}"
-    groupname: devserver
-  with_items: 
-    - "{{ instance_public_ip }}"
+#- name: Create SSH Group to login dynamically to EC2 Instance(s)
+#  add_host:
+#    hostname: "{{ item }}"
+#    groupname: devserver
+#  with_items: 
+#    - "{{ instance_public_ip }}"
 
