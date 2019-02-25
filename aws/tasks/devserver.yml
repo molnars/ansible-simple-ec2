@@ -3,17 +3,18 @@
   local_action:
     module: ec2
     region: "{{ vpc_region }}"
-    group: "{{ web_security_groups[0].sg_name }}"
+#    group: "{{ web_security_groups[0].sg_name }}"
     keypair: "{{ key_name }}"
     instance_type: "{{ instance_type }}"
     image: "{{ image_id }}"
     vpc_subnet_id: "{{ public_subnet }}"
-    assign_public_ip: True
+#    assign_public_ip: True
+    assign_public_ip: False
     wait: True
     wait_timeout: 600
-    user_data: |
-              #!/bin/sh
-              sudo apt-get install nginx -y
+#    user_data: |
+#              #!/bin/sh
+#              sudo apt-get install nginx -y
     instance_tags:
       Name: "{{ vpc_name }}_DEV_Instance"
   register: web
