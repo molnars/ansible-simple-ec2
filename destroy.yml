@@ -12,9 +12,10 @@
 
   tasks:
 
-    - name: Load `vpc_id` from state file
-      set_fact:
-        vpc_id: "{{ lookup('file', 'aws/state/' + vpc_name + '-vpc-info') }}"
+
+#- name: Load `vpc_id` from state file
+#      set_fact:
+#        vpc_id: "{{ lookup('file', 'aws/state/' + vpc_name + '-vpc-info') }}"
 
     - name: Load all VPC info
       ec2_remote_facts:
