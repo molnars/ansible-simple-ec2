@@ -1,4 +1,4 @@
 image_id: ami-a1fe43c5  # Debian
 image_login_user: admin
-key_name: ivan@probook
+key_name: demo
 instance_type: t2.micro
