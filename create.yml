@@ -5,12 +5,12 @@
   gather_facts: no
   vars_files:
     - aws/vars/vpc.yml
-    - aws/vars/securitygroups.yml
-    - aws/vars/ec2.yml
+#    - aws/vars/securitygroups.yml
+#    - aws/vars/ec2.yml
   tasks:
     - include: aws/tasks/vpc.yml
-    - include: aws/tasks/securitygroups.yml
-    - include: aws/tasks/devserver.yml
+#    - include: aws/tasks/securitygroups.yml
+#    - include: aws/tasks/devserver.yml
 
 - name: Configure devserver
   hosts: devserver
