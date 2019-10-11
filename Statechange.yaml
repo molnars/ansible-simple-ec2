@@ -1,0 +1,18 @@
+---
+
+- name: Destroy AWS dev landacepe VPC
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  vars_files:
+    - aws/vars/ec2.yml
+
+  tasks:
+    - name: DevServer | start-stop the DevServer Instance
+      local_action:
+        module: ec2
+        state: "{{ state-change }}"
+        instance_ids: ["{{instance_id}}"]
+        region: "{{ vpc_region }}"
+        wait: True
