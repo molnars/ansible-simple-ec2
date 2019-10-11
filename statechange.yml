@@ -12,7 +12,7 @@
     - name: DevServer | start-stop the DevServer Instance
       local_action:
         module: ec2
-        state: "{{ state-change }}"
+        state: "{{ state_change }}"
         instance_ids: ["{{instance_id}}"]
         region: "{{ vpc_region }}"
         wait: True
